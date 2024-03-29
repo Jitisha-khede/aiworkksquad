@@ -1,3 +1,16 @@
+body{
+  background-color: #2D313C;
+}
+
+.image {
+  position: absolute; 
+  top: 32px; 
+  left: 32px; 
+  width: 222px; 
+  height: 49px; 
+  border-radius: 0px; 
+}
+
 .container {
     position: absolute; 
     top: 127px; 
@@ -62,7 +75,8 @@
     border-radius: 4px; /* border-m */
     border-width: 1px; 
     border-color: #FFFFFFFF; /* white */
-    outline: none; 
+    outline: none;
+    color: #9095A0FF; 
   }
   .email svg {
     position: absolute; 

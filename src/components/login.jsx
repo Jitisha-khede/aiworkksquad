@@ -1,6 +1,24 @@
 import logo from '../logo.png';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function login(){
+function Login(){
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        if (email === 'user123' && password === 'pass123') {
+            console.log('Login successful');
+            navigate('/chat');
+        }
+        else {
+            console.log('Incorrect username or password');
+        }
+        setEmail('');
+        setPassword('');
+    }
     return (
         <div className = "App">
         <div className = "image" >
@@ -10,9 +28,9 @@ function login(){
         <div className = "container">
             <div className='welcome'>Welcome Back</div> 
             <div className='signin'>Sign in to continue to Aiworksquad</div>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <div className='email'>
-                <input type="email" placeholder='Email'/>
+                <input type="text" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
                     <title>envelope</title>
                     <g fill="#212121" class="nc-icon-wrapper">
@@ -34,11 +52,12 @@ function login(){
                     stroke='#9095A0FF' stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></rect>
                     </g>
                 </svg>
-                    <input type="password" placeholder='Password'/>
+                    <input type="password" placeholder='Password'  value={password}
+            onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <label class = 'remember'>Remember me</label><input type="checkbox" class="checkbox" />
                <div className='forgot'>Forgot password?</div>
-               <button class= 'button'>Login</button>
+               <button class= 'button' type='submit'>Login</button>
             </form>
         </div>
     
@@ -49,4 +68,4 @@ function login(){
     )
 }
 
-export default login;
+export default Login;
