@@ -1,5 +1,6 @@
 import {Routes,Route,BrowserRouter} from 'react-router-dom';
 import './App.css';
+import  './components/chat.css';
 import Login from './components/login.jsx'
 import Chat from './components/chat.jsx';
 import './components/login.css';

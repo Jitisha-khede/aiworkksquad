@@ -1,0 +1,269 @@
+body{
+    background-color: white;
+}
+
+.top-bar {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 1440px; 
+    height: 62px; 
+    background: #0095A9FF; /* primary-600 */
+    border-radius: 4px; /* border-m */
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+}
+
+.logo {
+    position: absolute; 
+    top: 4px; 
+    left: 10px; 
+    width: 220px; 
+    height: 42px; 
+    border-radius: 0px; 
+}
+
+.logo-box {
+    position: absolute; 
+    top: 6px; 
+    left: 12px; 
+    width: 241px; 
+    height: 50px; 
+    background: #EBFDFFFF; /* primary-100 */
+    border-radius: 4px; /* border-m */
+    border-width: 1px; 
+    border-color: #1D2128FF; /* neutral-800 */
+    border-style: solid; 
+    
+}
+
+.dropdown {
+    position: absolute; 
+    top: 13px; 
+    left: 1065px; 
+    width: 237px; 
+    height: 36px; 
+    background: #FFFFFFFF; 
+    border-radius: 6px; /* border-l */
+    border-width: 2px; 
+    border-color: #171A1FFF; /* neutral-900 */
+    border-style: solid; 
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  }
+
+.dropdown-text {
+    position: absolute; 
+    top: 9px; 
+    left: 53px; 
+    font-family: Inter; /* Body */
+    font-size: 11px; 
+    line-height: 18px; 
+    font-weight: 700; 
+    color: #171A1FFF; /* neutral-900 */
+    border: none;
+}
+
+.user-logo {
+    position: absolute; 
+    top: 21px; 
+    left: 1327px; 
+    width: 20px; 
+    height: 20px; 
+    fill: #FFFFFFFF; /* white */
+}
+
+.user {
+    position: absolute; 
+    top: 22px; 
+    left: 1351px; 
+    font-family: Inter; /* Body */
+    font-size: 11px; 
+    line-height: 18px; 
+    font-weight: 400; 
+    color: #FFFFFFFF; /* white */
+}
+
+/* Container 7164 */
+.side-bar-container {
+    position: absolute; 
+    top: 83px; 
+    left: 13px; 
+    width: 218px; 
+    height: 576px; 
+    background: #FFFFFFFF; 
+    border-radius: 4px; /* border-m */
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  }
+
+/* Container 7165 */
+.new-chat-container {
+    position: absolute; 
+    top: 17px; 
+    left: 5px; 
+    width: 206px; 
+    height: 38px; 
+    background: #FFFFFFFF; 
+    border-radius: 2.25px; 
+    border-width: 1px; 
+    border-color: #8191C9FF; 
+    border-style: solid; 
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  }
+
+.new-chat {
+    position: absolute; 
+    top: 9px; 
+    left: 69px; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #8191C9FF; 
+}
+
+/* History 20 */
+.history-logo {
+    position: absolute; 
+    top: 71px; 
+    left: 72px; 
+    width: 20px; 
+    height: 20px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+.history-text {
+    position: absolute; 
+    top: 71px; 
+    left: 106px; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #171A1FFF; /* neutral-900 */
+}
+
+.chat-history-container {
+    position: absolute; 
+    top: 107px; 
+    left: 9px; 
+    width: 200px; 
+    height: 152px; 
+}
+
+.chat-logo {
+    position: absolute; 
+    top: 4px; 
+    left: 5px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+.chat-history-text {
+    position: absolute; 
+    top: 0px; 
+    left: 31px; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #171A1FFF; /* neutral-900 */
+}
+
+.edit-button {
+    position: absolute; 
+    top: 4px; 
+    left: 158px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+.delete-button {
+    position: absolute; 
+    top: 4px; 
+    left: 186px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+/* A add 37 */
+.upgrade-logo {
+    position: absolute; 
+    top: 442px; 
+    left: 14px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+  }
+
+.upgrade {
+    position: absolute; 
+    top: 438px; 
+    left: 40px; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #565E6CFF; /* neutral-600 */
+}
+
+/* Launch app 37 */
+.updates-logo{
+    position: absolute; 
+    top: 476px; 
+    left: 14px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+
+.updates{
+    position: absolute; 
+    top: 472px; 
+    left: 40px; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #565E6CFF; /* neutral-600 */
+}
+
+/* File edit 37 */
+.tandc-logo {
+    position: absolute; 
+    top: 509px; 
+    left: 14px; 
+    width: 12px; 
+    height: 12px; 
+    fill: #171A1FFF; /* neutral-900 */
+}
+.tandc {
+    position: absolute; 
+    top: 506px; 
+    left: 39px; 
+    font-family: Inter; /* Body */
+    font-size: 11px; 
+    line-height: 18px; 
+    font-weight: 400; 
+    color: #565E6CFF; /* neutral-600 */
+}
+/* Shield check 37 */
+.privacy-logo {
+    position: absolute; 
+    top: 539px; 
+    left: 12px; 
+    width: 16px; 
+    height: 16px; 
+    fill: #171A1FFF; /* neutral-900 */
+  }
+  .privacy {
+    position: absolute; 
+    top: 538px; 
+    left: 40px; 
+    font-family: Inter; /* Body */
+    font-size: 11px; 
+    line-height: 18px; 
+    font-weight: 400; 
+    color: #565E6CFF; /* neutral-600 */
+  }
