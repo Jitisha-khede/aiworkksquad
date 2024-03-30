@@ -10,8 +10,7 @@ body{
   height: 49px; 
   border-radius: 0px; 
 }
-
-.container {
+.login-container {
     position: absolute; 
     top: 127px; 
     left: 380px; 
@@ -21,7 +20,7 @@ body{
     border-radius: 0px 8px 8px 0px; /* border-tr-none border-br-none */
     box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
   }
-  
+
   .footer {
     position: absolute; 
     top: 809px; 
@@ -32,27 +31,68 @@ body{
     font-weight: 400; 
     color: #FFFFFFFF; /* white */
   }
-  
+
+
+
+
+  @media (max-width: 768px) {
+    .image {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px; /* Adjust the width for smaller screens */
+      top: 40px;
+    }
+    .login-container {
+      left: 50%;
+      transform: translateX(-50%);
+        padding: 20px 10px; /* Reduce padding equally from both sides */
+        width: 90%; /* Reduce width */
+        height: 70%;
+    }
+    .footer {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 650px;
+    }
+  }
+
+
+
   .welcome {
-    position: absolute; 
-    top: 32px; 
-    left: 223px; 
+    padding: auto;
+    position: absolute;
+    top: 32px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     font-family: Epilogue; /* Heading */
-    font-size: 24px; 
-    line-height: 36px; 
-    font-weight: 700; 
+    font-size: 2rem; /* Example: set font size using rem */
+    line-height: 1.5; /* Example: set line height using unitless value */
+    font-weight: 700;
     color: #FFFFFFFF; /* white */
   }
   
   .signin {
-    position: absolute; 
-    top: 84px; 
-    left: 179px; 
+    position: absolute;
+    top: 84px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     font-family: Inter; /* Body */
-    font-size: 16px; 
-    line-height: 26px; 
-    font-weight: 400; 
+    font-size: 1rem; /* Example: set font size using rem */
+    line-height: 1.6; /* Example: set line height using unitless value */
+    font-weight: 400;
     color: #FFFFFFFF; /* white */
+  }
+
+  @media (max-width: 768px) {
+    .welcome {
+      font-size: 1.5rem; /* Decrease font size for smaller screens */
+      line-height: 1.4; /* Adjust line height for smaller screens */
+    }
+  
+    .signin {
+      font-size: 0.875rem; /* Decrease font size for smaller screens */
+      line-height: 1.5; /* Adjust line height for smaller screens */
+    }
   }
   /* email 750 */
   
@@ -168,13 +208,59 @@ body{
   .password :disabled + .icon, .password :disabled + .icon + .icon {
     fill: #9095A0FF; /* neutral-500 */
   }
+
+  @media (max-width : 768px) {
+    .email, .password {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+    
+    .email {
+      top: 158px;
+    }
+    
+    .password {
+      top: 217px;
+    }
+    
+    .email input, .password input {
+      width: calc(100% - 72px);
+      height: 42px;
+      padding-left: 52px;
+      padding-right: 20px;
+      font-family: Inter;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      background-color: #171A1FFF;
+      border-radius: 4px;
+      border-width: 1px;
+      border-color: #FFFFFFFF;
+      outline: none;
+      color: #9095A0FF;
+    }
+    
+    .email svg, .password svg {
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      width: 18px;
+      height: 18px;
+      fill: #9095A0FF;
+    }
+    
+  }
+
   
   /* Checkbox 298 */
   .checkbox {
-    position: absolute; 
-    top: 271px; 
-    left: 172px; 
-    opacity: 1; 
+    position: absolute;
+    top: 271px;
+    left: 28%; /* Center horizontally */
+    transform: translateX(-50%);
+    opacity: 1;
   }
   .checkbox input {
     display: none; 
@@ -249,7 +335,7 @@ body{
   .remember{
     position: absolute; 
     top: 271px; 
-    left: 192px; 
+    left: calc(28% + 25px); 
     font-family: Inter; /* Body */
     font-size: 14px; 
     line-height: 22px; 
@@ -260,33 +346,57 @@ body{
   .forgot{
     position: absolute; 
     top: 271px; 
-    left: 334px; 
+    left: calc(60% + 20px); 
     font-family: Inter; /* Body */
     font-size: 14px; 
     line-height: 22px; 
     font-weight: 400; 
     color: #9095A0FF;
   }
+
+  @media (max-width: 768px) {
+    .checkbox {
+      top: 271px; /* Adjust the top position for smaller screens */
+      left: 33%; /* Adjust the left position for smaller screens */
+    }
   
+    .remember {
+      top: 271px; /* Adjust the top position for smaller screens */
+      left: calc(33% + 25px); /* Adjust the left position for smaller screens */
+    }
+  
+    .checkbox, .remember {
+      font-size: 12px; /* Decrease font size for smaller screens */
+      line-height: 18px; /* Adjust line height for smaller screens */
+    }
+  }
+  @media (max-width: 500px) {
+    .forgot {
+      top: 300px; /* Move "Forgot password" text down for smaller screens */
+      left: 33%; /* Adjust the left position for smaller screens */
+    }
+  }
   /* Button 2029 */
   .button {
-    position: absolute; 
-    top: 338px; 
-    left: 171px; 
-    width: 279px; 
-    height: 44px; 
-    padding: 0 12px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    font-family: Inter; 
-    font-size: 14px; 
-    line-height: 22px; 
-    font-weight: 400; 
+    position: absolute;
+    top: 338px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: calc(100% - 72px); /* Adjust width using relative unit */
+    max-width: 279px; /* Set maximum width if needed */
+    height: 44px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
     color: #FFFFFFFF; /* white */
     background: #4069E5FF; /* tertiary1-500 */
-    opacity: 1; 
-    border: none; 
+    opacity: 1;
+    border: none;
     border-radius: 4px; /* border-m */
   }
   /* Hover */
@@ -304,3 +414,10 @@ body{
     opacity: 0.4; 
 }
 
+@media (max-width: 768px) {
+  .button {
+    width: calc(35% - 40px);
+    height: 40px; /* Adjust height for smaller screens */
+    top: 338px; /* Adjust top position for smaller screens */
+  }
+}

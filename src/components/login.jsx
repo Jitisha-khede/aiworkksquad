@@ -1,6 +1,8 @@
 import logo from '../assets/logo_login.png';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './login.css';
+
 
 function Login(){
     const [email, setEmail] = useState('');
@@ -20,12 +22,12 @@ function Login(){
         setPassword('');
     }
     return (
-        <div className = "App">
+        <div className = "outer-container">
         <div className = "image" >
           <img src={logo} alt="Logo" />
         </div>
 
-        <div className = "container">
+        <div className = "login-container">
             <div className='welcome'>Welcome Back</div> 
             <div className='signin'>Sign in to continue to Aiworksquad</div>
             <form onSubmit={handleSubmit}>
