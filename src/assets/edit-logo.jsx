@@ -3,6 +3,7 @@ import React from "react";
 function EditLogo(){
   return(
     <div className="edit-button">
+      <button style={{ border: 'none', background: 'none' }}>
       <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
             <title>pen writing 4</title>
             <g fill="#212121" class="nc-icon-wrapper">
@@ -14,7 +15,7 @@ function EditLogo(){
                 </path>
             </g>
         </svg>
-
+        </button>
     </div>
   )
 }

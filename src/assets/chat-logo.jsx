@@ -11,6 +11,7 @@ function ChatLogo(){
                 </path>
             </g>
         </svg>
+       
     </div>
   )
 }

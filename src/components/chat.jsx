@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useRef} from "react";
 import './chat.css';
 import logo from '../assets/logo_chat.png'
 import UserLogo from "../assets/user-logo";
@@ -15,8 +15,28 @@ import PenLogo from "../assets/pen-logo";
 import SendLogo from "../assets/send-logo";
 function Chat(){
     const [selectedOption, setSelectedOption] = useState("marketing");
+    const [editMode, setEditMode] = useState(false);
+    const [editMode2, setEditMode2] = useState(false);
+    const inputRef = useRef(null);
+    const inputRef2 = useRef(null);
     const handleDropdownChange =  (e) =>{
         setSelectedOption(e.target.value);
+    }
+    const handleEditClick = () => {
+        setEditMode(true);
+        inputRef.current.focus();
+        console.log('edit');// Enable edit mode when edit button is clicked
+    }
+    const handleEditClick2 = () => {
+        setEditMode2(true);
+        inputRef.current.focus();
+        console.log('edit');// Enable edit mode when edit button is clicked
+    }
+    const handleBlur = () => {
+        setEditMode(false);
+    }
+    const handleBlur2 = () => {
+        setEditMode2(false);
     }
 
     return(
@@ -41,8 +61,8 @@ function Chat(){
         </div>
 
         <div className="side-bar-container">
-            <div className="new-chat-container">
-                <div className="new-chat">+ New Chat</div>
+            <div>
+                <button className="new-chat-container">+ New Chat</button>
             </div>
 
             <div className="history">
@@ -52,25 +72,58 @@ function Chat(){
 
             <div className="chat-history-container">
                 <ChatLogo/>
-                <div className="chat-history-text">New Chat</div>
-                <EditLogo/>
+                <div className="chat-history-text">
+                    <input type="text" placeholder="New Chat jblk.jblhuvyvtctclotc" className={`new-chat ${editMode ? 'editable' : ''}`}
+                     readOnly={!editMode} ref={inputRef} onBlur={handleBlur} style={editMode ? { outline: '1px solid blue' } : {}} />
+                </div>
+                <div className="edit-button">
+
+                    <button style={{ border: 'none', background: 'none' }} onClick={handleEditClick}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                            <title>pen writing 4</title>
+                            <g fill="#212121" class="nc-icon-wrapper">
+                                <path d="M4.25,10.25h-1c-.828,0-1.5,.672-1.5,1.5h0c0,.828,.672,1.5,1.5,1.5H14.75c.828,0,1.5,.672,1.5,1.5h0c0,.828-.672,1.5-1.5,1.5h-2" fill="none" stroke="#212121" 
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" data-color="color-2">
+                                </path>
+                                <path d="M6.836,10.164s2.034-.034,2.75-.75,5.25-5.25,5.25-5.25c.552-.552,.552-1.448,0-2-.552-.552-1.448-.552-2,0,0,0-4.534,4.534-5.25,5.25s-.75,2.75-.75,2.75Z" fill="none" stroke="#212121"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                </path>
+                            </g>
+                        </svg>
+                        </button>
+                    </div>
                 <DeleteLogo/>
             </div>
 
             <UpgradeLogo/>
-            <div className="upgrade">Upgrade to Plus</div>
+            <div className="upgrade"><a href="#"> Upgrade to Plus</a></div>
             <UpdatesLogo/>
-            <div className="updates">Updates & FAQ</div>
+            <div className="updates"><a href="#"> Updates & FAQ</a></div>
             <TandCLogo/>
-            <div className="tandc"> Terms and Conditions</div>
+            <div className="tandc"><a href="#"> Terms and Conditions</a></div>
             <PrivacyLogo/>
-            <div className="privacy">Privacy Policy Page</div>
+            <div className="privacy"><a href="#"> Privacy Policy Page</a></div>
         </div>
 
         <div className="intro-container">
                 <div className="intro-heading">Introduce yourself to AIWorkSquad</div>
-                <div className="intro-placeholder">I'm abc, employee of xyz company </div>
-                <PenLogo/>
+                <div className="intro-placeholder">
+                    <input type="text" placeholder="Enter your details here" className={`intro-placeholder ${editMode2 ? 'editable' : ''}`}
+                     readOnly={!editMode2} ref={inputRef2} onBlur={handleBlur2} style={editMode2 ? { outline: '1px solid blue' } : {}}/>
+                </div>
+                
+                <div className="pen-logo"> 
+                    <button style={{ border: 'none', background: 'none' }} onClick={handleEditClick2}>                   
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 18 18">
+                        <title>pen 3</title>
+                        <g fill="#212121" class="nc-icon-wrapper">
+                        <path d="M10,5l3.586,3.586c.781,.781,.781,2.047,0,2.828l-1.586,1.586" fill="none" 
+                        stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        data-color="color-2"></path><path d="M2.75,15.25s3.599-.568,4.546-1.515c.947-.947,7.327-7.327,7.327-7.327,.837-.837,.837-2.194,0-3.03-.837-.837-2.194-.837-3.03,0,0,0-6.38,6.38-7.327,7.327s-1.515,4.546-1.515,4.546h0Z" 
+                        fill="none" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></g></svg>
+                    </button>
+                </div>
+
             </div>
         <div className="chat-area-container">
 

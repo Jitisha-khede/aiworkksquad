@@ -23,7 +23,7 @@ body{
 
   .footer {
     position: absolute; 
-    top: 809px; 
+    top: calc(127px + 599px + 20px);
     left: 650px; 
     font-family: Inter; /* Body */
     font-size: 16px; 
