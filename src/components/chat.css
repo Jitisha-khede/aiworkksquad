@@ -393,3 +393,34 @@ a {
     height: 20px; 
     fill: #171A1FFF; /* neutral-900 */
   }
+
+  /* Container 7160 */
+.sender-message-container {
+  position: absolute; 
+  top: 467px; 
+  left: 345px; 
+  width: 664px; 
+  height: 56px; 
+  display: flex; /* Use flexbox */
+  justify-content: flex-end;
+  box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; /* shadow-xs */
+  font-family: Inter; /* Body */
+  font-size: 16px; 
+  line-height: 26px; 
+  font-weight: 400; 
+  color: #FFFFFFFF;
+  background-color: #12A9BCFF; /* Example background color */
+  color: white; /* Example text color */
+  padding: 10px; /* Example padding */
+  border-radius: 3px;
+}
+
+/* Seal question 70 */
+.question-mark-logo-message {
+  position: absolute; 
+  top: 485px; 
+  left: 620px; 
+  width: 20px; 
+  height: 20px; 
+  fill: #FFFFFF; /* white */
+}
